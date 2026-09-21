@@ -1,0 +1,288 @@
+\doxysection{Cognitive\+Engine Class Reference}
+\hypertarget{classCognitiveEngine}{}\label{classCognitiveEngine}\index{CognitiveEngine@{CognitiveEngine}}
+
+
+{\ttfamily \#include $<$Cognitive\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Cognitive\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classCognitiveEngine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCognitiveEngine_aa2f5f5d4fe8f6f6e65c675efa50ffe05}{Cognitive\+Engine}} ()
+\item 
+\mbox{\hyperlink{classCognitiveEngine_a94953d0b32d92d8704d7f09a321e1c7a}{Cognitive\+Engine}} (const std\+::string \&tag, uint32\+\_\+t initial\+Locus, const Triad \&initial\+State)
+\item 
+std\+::string \mbox{\hyperlink{classCognitiveEngine_a89d1bf68fa8dfeaff3bfa506442728b0}{get\+Engine\+Tag}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classCognitiveEngine_a1c6cba6e82ccafe6aa1e64f4005cca3b}{get\+Current\+Locus}} () const
+\item 
+Triad \mbox{\hyperlink{classCognitiveEngine_acfce88a72f91d23be472a3cb050d198e}{get\+Current\+State}} () const
+\item 
+double \mbox{\hyperlink{classCognitiveEngine_a7241e4db303ecdc251088094d502a2ab}{get\+Metric\+Energy}} () const
+\item 
+std\+::string \mbox{\hyperlink{classCognitiveEngine_a55127504f8033d3de840537bee73d1dd}{get\+Current\+Node\+Label}} () const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classCognitiveEngine_adf3e88c01481aac23f3aa086a5479efc}{get\+Session\+Log}} () const
+\item 
+void \mbox{\hyperlink{classCognitiveEngine_a7734b004dc6ecfd50ef6ef08e9f710d5}{set\+Engine\+Tag}} (const std\+::string \&new\+Tag)
+\item 
+bool \mbox{\hyperlink{classCognitiveEngine_ab274421f6054165967d1663eaf4bf632}{set\+Current\+Locus}} (uint32\+\_\+t target\+Node\+Id)
+\item 
+void \mbox{\hyperlink{classCognitiveEngine_ab643e441968f025dd4e3e92cb75b84cc}{set\+Current\+State}} (const Triad \&next\+State)
+\item 
+void \mbox{\hyperlink{classCognitiveEngine_af234f958e5989f23381f72983343ae2e}{apply\+Kinematic\+Rotation}} ()
+\item 
+void \mbox{\hyperlink{classCognitiveEngine_a57b102fd12fedd5b3337972a26457e33}{apply\+Dissipation\+Decay}} (double rate=0.\+08)
+\item 
+bool \mbox{\hyperlink{classCognitiveEngine_a237872e022566b306d7374639109fea0}{transition\+To}} (uint32\+\_\+t target\+Node\+Id)
+\item 
+void \mbox{\hyperlink{classCognitiveEngine_aa44fcabc3e28b8322e61e4086dc069de}{emit\+Telemetry\+Report}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCognitiveEngine_a05514eb77554c9dbf96945ba02a358eb}{record\+Trace}} (const std\+::string \&entry)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classCognitiveEngine_a61606d6c3013854b4c6889a32487eeb4}{engine\+Tag}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classCognitiveEngine_ab091f91fe221cf1822e76d0c816c645a}{current\+Locus}}
+\item 
+Triad \mbox{\hyperlink{classCognitiveEngine_a552b081c6f66759f4600c8245276cc29}{current\+State}}
+\item 
+Graph\+Manifold \mbox{\hyperlink{classCognitiveEngine_aaf289ff408638490214ae6696d37682d}{manifold}}
+\item 
+Triadic\+Rotator \mbox{\hyperlink{classCognitiveEngine_a0dfc3e62e15ce014fcff4231a44fa154}{rotator}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classCognitiveEngine_ad4092d76321b633e0c89ce901a0bf963}{session\+Log}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCognitiveEngine_aa2f5f5d4fe8f6f6e65c675efa50ffe05}\label{classCognitiveEngine_aa2f5f5d4fe8f6f6e65c675efa50ffe05} 
+\index{CognitiveEngine@{CognitiveEngine}!CognitiveEngine@{CognitiveEngine}}
+\index{CognitiveEngine@{CognitiveEngine}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{CognitiveEngine()}{CognitiveEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cognitive\+Engine\+::\+Cognitive\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_aa2f5f5d4fe8f6f6e65c675efa50ffe05_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_a94953d0b32d92d8704d7f09a321e1c7a}\label{classCognitiveEngine_a94953d0b32d92d8704d7f09a321e1c7a} 
+\index{CognitiveEngine@{CognitiveEngine}!CognitiveEngine@{CognitiveEngine}}
+\index{CognitiveEngine@{CognitiveEngine}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{CognitiveEngine()}{CognitiveEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cognitive\+Engine\+::\+Cognitive\+Engine (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag,  }\item[{uint32\+\_\+t}]{initial\+Locus,  }\item[{const Triad \&}]{initial\+State }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_a94953d0b32d92d8704d7f09a321e1c7a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCognitiveEngine_a57b102fd12fedd5b3337972a26457e33}\label{classCognitiveEngine_a57b102fd12fedd5b3337972a26457e33} 
+\index{CognitiveEngine@{CognitiveEngine}!applyDissipationDecay@{applyDissipationDecay}}
+\index{applyDissipationDecay@{applyDissipationDecay}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{applyDissipationDecay()}{applyDissipationDecay()}}
+{\footnotesize\ttfamily void Cognitive\+Engine\+::apply\+Dissipation\+Decay (\begin{DoxyParamCaption}\item[{double}]{rate = {\ttfamily 0.08} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_a57b102fd12fedd5b3337972a26457e33_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_af234f958e5989f23381f72983343ae2e}\label{classCognitiveEngine_af234f958e5989f23381f72983343ae2e} 
+\index{CognitiveEngine@{CognitiveEngine}!applyKinematicRotation@{applyKinematicRotation}}
+\index{applyKinematicRotation@{applyKinematicRotation}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{applyKinematicRotation()}{applyKinematicRotation()}}
+{\footnotesize\ttfamily void Cognitive\+Engine\+::apply\+Kinematic\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_af234f958e5989f23381f72983343ae2e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_aa44fcabc3e28b8322e61e4086dc069de}\label{classCognitiveEngine_aa44fcabc3e28b8322e61e4086dc069de} 
+\index{CognitiveEngine@{CognitiveEngine}!emitTelemetryReport@{emitTelemetryReport}}
+\index{emitTelemetryReport@{emitTelemetryReport}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{emitTelemetryReport()}{emitTelemetryReport()}}
+{\footnotesize\ttfamily void Cognitive\+Engine\+::emit\+Telemetry\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_aa44fcabc3e28b8322e61e4086dc069de_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_a1c6cba6e82ccafe6aa1e64f4005cca3b}\label{classCognitiveEngine_a1c6cba6e82ccafe6aa1e64f4005cca3b} 
+\index{CognitiveEngine@{CognitiveEngine}!getCurrentLocus@{getCurrentLocus}}
+\index{getCurrentLocus@{getCurrentLocus}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{getCurrentLocus()}{getCurrentLocus()}}
+{\footnotesize\ttfamily uint32\+\_\+t Cognitive\+Engine\+::get\+Current\+Locus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCognitiveEngine_a55127504f8033d3de840537bee73d1dd}\label{classCognitiveEngine_a55127504f8033d3de840537bee73d1dd} 
+\index{CognitiveEngine@{CognitiveEngine}!getCurrentNodeLabel@{getCurrentNodeLabel}}
+\index{getCurrentNodeLabel@{getCurrentNodeLabel}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{getCurrentNodeLabel()}{getCurrentNodeLabel()}}
+{\footnotesize\ttfamily std\+::string Cognitive\+Engine\+::get\+Current\+Node\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCognitiveEngine_acfce88a72f91d23be472a3cb050d198e}\label{classCognitiveEngine_acfce88a72f91d23be472a3cb050d198e} 
+\index{CognitiveEngine@{CognitiveEngine}!getCurrentState@{getCurrentState}}
+\index{getCurrentState@{getCurrentState}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{getCurrentState()}{getCurrentState()}}
+{\footnotesize\ttfamily Triad Cognitive\+Engine\+::get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCognitiveEngine_a89d1bf68fa8dfeaff3bfa506442728b0}\label{classCognitiveEngine_a89d1bf68fa8dfeaff3bfa506442728b0} 
+\index{CognitiveEngine@{CognitiveEngine}!getEngineTag@{getEngineTag}}
+\index{getEngineTag@{getEngineTag}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{getEngineTag()}{getEngineTag()}}
+{\footnotesize\ttfamily std\+::string Cognitive\+Engine\+::get\+Engine\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCognitiveEngine_a7241e4db303ecdc251088094d502a2ab}\label{classCognitiveEngine_a7241e4db303ecdc251088094d502a2ab} 
+\index{CognitiveEngine@{CognitiveEngine}!getMetricEnergy@{getMetricEnergy}}
+\index{getMetricEnergy@{getMetricEnergy}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{getMetricEnergy()}{getMetricEnergy()}}
+{\footnotesize\ttfamily double Cognitive\+Engine\+::get\+Metric\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCognitiveEngine_adf3e88c01481aac23f3aa086a5479efc}\label{classCognitiveEngine_adf3e88c01481aac23f3aa086a5479efc} 
+\index{CognitiveEngine@{CognitiveEngine}!getSessionLog@{getSessionLog}}
+\index{getSessionLog@{getSessionLog}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{getSessionLog()}{getSessionLog()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Cognitive\+Engine\+::get\+Session\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCognitiveEngine_a05514eb77554c9dbf96945ba02a358eb}\label{classCognitiveEngine_a05514eb77554c9dbf96945ba02a358eb} 
+\index{CognitiveEngine@{CognitiveEngine}!recordTrace@{recordTrace}}
+\index{recordTrace@{recordTrace}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{recordTrace()}{recordTrace()}}
+{\footnotesize\ttfamily void Cognitive\+Engine\+::record\+Trace (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCognitiveEngine_ab274421f6054165967d1663eaf4bf632}\label{classCognitiveEngine_ab274421f6054165967d1663eaf4bf632} 
+\index{CognitiveEngine@{CognitiveEngine}!setCurrentLocus@{setCurrentLocus}}
+\index{setCurrentLocus@{setCurrentLocus}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{setCurrentLocus()}{setCurrentLocus()}}
+{\footnotesize\ttfamily bool Cognitive\+Engine\+::set\+Current\+Locus (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{target\+Node\+Id }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_ab274421f6054165967d1663eaf4bf632_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_ab643e441968f025dd4e3e92cb75b84cc}\label{classCognitiveEngine_ab643e441968f025dd4e3e92cb75b84cc} 
+\index{CognitiveEngine@{CognitiveEngine}!setCurrentState@{setCurrentState}}
+\index{setCurrentState@{setCurrentState}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{setCurrentState()}{setCurrentState()}}
+{\footnotesize\ttfamily void Cognitive\+Engine\+::set\+Current\+State (\begin{DoxyParamCaption}\item[{const Triad \&}]{next\+State }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_ab643e441968f025dd4e3e92cb75b84cc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_a7734b004dc6ecfd50ef6ef08e9f710d5}\label{classCognitiveEngine_a7734b004dc6ecfd50ef6ef08e9f710d5} 
+\index{CognitiveEngine@{CognitiveEngine}!setEngineTag@{setEngineTag}}
+\index{setEngineTag@{setEngineTag}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{setEngineTag()}{setEngineTag()}}
+{\footnotesize\ttfamily void Cognitive\+Engine\+::set\+Engine\+Tag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Tag }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_a7734b004dc6ecfd50ef6ef08e9f710d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCognitiveEngine_a237872e022566b306d7374639109fea0}\label{classCognitiveEngine_a237872e022566b306d7374639109fea0} 
+\index{CognitiveEngine@{CognitiveEngine}!transitionTo@{transitionTo}}
+\index{transitionTo@{transitionTo}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{transitionTo()}{transitionTo()}}
+{\footnotesize\ttfamily bool Cognitive\+Engine\+::transition\+To (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{target\+Node\+Id }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCognitiveEngine_a237872e022566b306d7374639109fea0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCognitiveEngine_ab091f91fe221cf1822e76d0c816c645a}\label{classCognitiveEngine_ab091f91fe221cf1822e76d0c816c645a} 
+\index{CognitiveEngine@{CognitiveEngine}!currentLocus@{currentLocus}}
+\index{currentLocus@{currentLocus}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{currentLocus}{currentLocus}}
+{\footnotesize\ttfamily uint32\+\_\+t Cognitive\+Engine\+::current\+Locus\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCognitiveEngine_a552b081c6f66759f4600c8245276cc29}\label{classCognitiveEngine_a552b081c6f66759f4600c8245276cc29} 
+\index{CognitiveEngine@{CognitiveEngine}!currentState@{currentState}}
+\index{currentState@{currentState}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{currentState}{currentState}}
+{\footnotesize\ttfamily Triad Cognitive\+Engine\+::current\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCognitiveEngine_a61606d6c3013854b4c6889a32487eeb4}\label{classCognitiveEngine_a61606d6c3013854b4c6889a32487eeb4} 
+\index{CognitiveEngine@{CognitiveEngine}!engineTag@{engineTag}}
+\index{engineTag@{engineTag}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{engineTag}{engineTag}}
+{\footnotesize\ttfamily std\+::string Cognitive\+Engine\+::engine\+Tag\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCognitiveEngine_aaf289ff408638490214ae6696d37682d}\label{classCognitiveEngine_aaf289ff408638490214ae6696d37682d} 
+\index{CognitiveEngine@{CognitiveEngine}!manifold@{manifold}}
+\index{manifold@{manifold}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{manifold}{manifold}}
+{\footnotesize\ttfamily Graph\+Manifold Cognitive\+Engine\+::manifold\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCognitiveEngine_a0dfc3e62e15ce014fcff4231a44fa154}\label{classCognitiveEngine_a0dfc3e62e15ce014fcff4231a44fa154} 
+\index{CognitiveEngine@{CognitiveEngine}!rotator@{rotator}}
+\index{rotator@{rotator}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{rotator}{rotator}}
+{\footnotesize\ttfamily Triadic\+Rotator Cognitive\+Engine\+::rotator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCognitiveEngine_ad4092d76321b633e0c89ce901a0bf963}\label{classCognitiveEngine_ad4092d76321b633e0c89ce901a0bf963} 
+\index{CognitiveEngine@{CognitiveEngine}!sessionLog@{sessionLog}}
+\index{sessionLog@{sessionLog}!CognitiveEngine@{CognitiveEngine}}
+\doxysubsubsection{\texorpdfstring{sessionLog}{sessionLog}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Cognitive\+Engine\+::session\+Log\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CognitiveEngine_8h}{Cognitive\+Engine.\+h}}\item 
+\mbox{\hyperlink{CognitiveEngine_8cpp}{Cognitive\+Engine.\+cpp}}\end{DoxyCompactItemize}
