@@ -1,0 +1,5 @@
+engine
+build/
+*.o
+*.obj
+.cache/
